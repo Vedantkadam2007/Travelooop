@@ -1739,54 +1739,6 @@ def get_share_analytics(trip_id):
         return jsonify({'error': str(e)}), 500
 
 # User Profile and Settings Routes
-@app.route('/api/user/profile', methods=['GET'])
-@jwt_required()
-def get_user_profile():
-    try:
-        user_id = get_jwt_identity()
-        user = User.query.get(user_id)
-        
-        if not user:
-            return jsonify({'error': 'User not found'}), 404
-        
-        return jsonify(user.to_dict()), 200
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
-
-@app.route('/api/user/profile', methods=['PUT'])
-@jwt_required()
-def update_user_profile():
-    try:
-        user_id = get_jwt_identity()
-        user = User.query.get(user_id)
-        
-        if not user:
-            return jsonify({'error': 'User not found'}), 404
-        
-        data = request.get_json()
-        
-        # Update allowed fields
-        updatable_fields = [
-            'first_name', 'last_name', 'bio', 'language_preference', 
-            'timezone', 'date_format', 'currency_preference',
-            'email_notifications', 'push_notifications',
-            'privacy_profile_public', 'privacy_show_trips'
-        ]
-        
-        for field in updatable_fields:
-            if field in data:
-                setattr(user, field, data[field])
-        
-        db.session.commit()
-        
-        return jsonify({
-            'message': 'Profile updated successfully',
-            'user': user.to_dict()
-        }), 200
-        
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/user/email', methods=['PUT'])
 @jwt_required()
