@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveloop - Your Travel Planning Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-plane-departure"></i>
+                <span>Traveloop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#" onclick="showLogin()">Login</a></li>
+                <li><a href="#" onclick="showSignup()" class="btn-primary">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Plan Your Perfect Journey</h1>
+            <p>Create amazing travel itineraries, manage budgets, and explore destinations with Traveloop</p>
+            <div class="hero-buttons">
+                <button onclick="showSignup()" class="btn-primary btn-large">Get Started</button>
+                <button onclick="scrollToSection('features')" class="btn-secondary btn-large">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Travel">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Everything You Need for Travel Planning</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Itinerary Builder</h3>
+                    <p>Create detailed day-by-day itineraries with activities, timings, and locations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3>Budget Calculator</h3>
+                    <p>Track expenses and estimate costs for flights, accommodation, activities, and more</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Destination Search</h3>
+                    <p>Explore cities and find popular activities, restaurants, and attractions</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-share-alt"></i>
+                    <h3>Share Trips</h3>
+                    <p>Share your itineraries with friends and collaborate on travel plans</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-suitcase"></i>
+                    <h3>Packing Checklist</h3>
+                    <p>Never forget essentials with smart packing lists for different destinations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Trip Analytics</h3>
+                    <p>Get insights about your travel patterns and optimize future trips</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris, France</h3>
+                        <p>City of Light</p>
+                        <div class="destination-stats">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 120+ activities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Tokyo">
+                    <div class="destination-info">
+                        <h3>Tokyo, Japan</h3>
+                        <p>Modern Metropolis</p>
+                        <div class="destination-stats">
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 200+ activities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1530521954074-e64f6810b32d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Bali">
+                    <div class="destination-info">
+                        <h3>Bali, Indonesia</h3>
+                        <p>Tropical Paradise</p>
+                        <div class="destination-stats">
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 150+ activities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="New York">
+                    <div class="destination-info">
+                        <h3>New York, USA</h3>
+                        <p>City That Never Sleeps</p>
+                        <div class="destination-stats">
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-map-marker-alt"></i> 180+ activities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-plane-departure"></i>
+                        <span>Traveloop</span>
+                    </div>
+                    <p>Your companion for perfect travel planning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li><a href="#">Trip Planning</a></li>
+                        <li><a href="#">Budget Calculator</a></li>
+                        <li><a href="#">Destination Guide</a></li>
+                        <li><a href="#">Packing Lists</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Traveloop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Container -->
+    <div id="modal-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
