@@ -15,5 +15,13 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "functions": {
+    "api/vercel_app.py": {
+      "runtime": "python3.9"
+    }
+  },
+  "buildCommand": "echo 'Skipping build for Flask app'",
+  "outputDirectory": ".",
+  "installCommand": "pip install -r requirements.txt"
 }
