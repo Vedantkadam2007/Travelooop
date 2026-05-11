@@ -1,4 +1,4 @@
- {
+{
   "version": 2,
   "builds": [
     {
@@ -23,5 +23,17 @@
   },
   "buildCommand": "echo 'Skipping build for Flask app'",
   "outputDirectory": ".",
-  "installCommand": "pip install -r requirements.txt"
+  "installCommand": "pip install -r requirements.txt",
+  "framework": null,
+  "devCommand": null,
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/vercel_app.py"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }

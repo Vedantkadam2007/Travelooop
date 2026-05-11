@@ -10,3 +10,9 @@ README.md
 uploads
 *.db
 *.sqlite
+vite.config.*
+*.vue
+tsconfig.*
+*.ts
+*.jsx
+*.tsx
