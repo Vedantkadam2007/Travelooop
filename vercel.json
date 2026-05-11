@@ -17,9 +17,15 @@
       "runtime": "python3.9"
     }
   },
-  "buildCommand": "echo 'Flask app - no build needed'",
+  "buildCommand": "echo 'Python Flask app - no build required'",
   "outputDirectory": ".",
   "installCommand": "pip install -r requirements.txt",
   "framework": null,
-  "devCommand": null
+  "devCommand": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/app.py"
+    }
+  ]
 }

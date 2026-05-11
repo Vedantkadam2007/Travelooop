@@ -16,3 +16,7 @@ tsconfig.*
 *.ts
 *.jsx
 *.tsx
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.json
